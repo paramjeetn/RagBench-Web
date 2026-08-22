@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+ï»¿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RagBench — Evaluate & Compare RAG Pipelines",
+  title: "RagBench - Evaluate and Compare RAG Pipelines",
   description: "Evaluate, compare, and improve your RAG pipeline configurations locally with Docker.",
 };
 
@@ -24,10 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="${geistSans.variable}  antialiased">
         {children}
       </body>
     </html>
   );
 }
-
