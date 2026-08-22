@@ -114,17 +114,11 @@ export default function Home() {
             href="https://github.com/paramjeetn/RagBench"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-white hover:text-bauhaus-yellow transition-colors font-bold uppercase text-sm tracking-wide"
+            className="flex items-center gap-2 bg-white text-[#0a0a14] border-2 border-white px-4 py-1.5 font-black uppercase text-xs md:text-sm tracking-widest hover:bg-bauhaus-yellow hover:border-bauhaus-yellow transition-colors"
           >
-            <Github size={18} />
+            <Github size={16} />
             Star on GitHub
           </a>
-          <Link
-            href="/dashboard"
-            className="bg-bauhaus-red text-white border-2 border-white px-4 py-1.5 font-black uppercase text-sm tracking-widest hover:bg-white hover:text-bauhaus-red transition-colors"
-          >
-            Open App
-          </Link>
         </div>
       </nav>
 
@@ -322,12 +316,9 @@ export default function Home() {
                 <p className="font-medium text-lg leading-relaxed mb-6 bg-white/50 p-4 border-2 border-[#0a0a14]/10">
                   Once the app is running, click <strong className="font-black">Pipeline Settings</strong> in the sidebar to configure your LLM, embedding model, and enter API keys. Keys are stored in your browser — never on any server.
                 </p>
-                <Link
-                  href="/settings"
-                  className="inline-flex items-center gap-2 bg-bauhaus-blue text-white font-black uppercase tracking-widest px-6 py-3 border-[3px] border-[#0a0a14] shadow-[4px_4px_0_#0a0a14] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-[2px_2px_0_#0a0a14] transition-all"
-                >
-                  <Settings size={18} /> Open Settings
-                </Link>
+                <div className="inline-flex items-center gap-2 bg-[#0a0a14] text-white font-black uppercase tracking-widest text-xs px-4 py-2 border-2 border-bauhaus-yellow">
+                  <Key size={14} className="text-bauhaus-yellow" /> Browser-Level Storage · 100% Private
+                </div>
               </div>
               
               <div className="flex-1 bg-white p-6 border-[3px] border-[#0a0a14]">
