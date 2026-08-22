@@ -219,7 +219,60 @@ export default function Home() {
           <div className="mb-12 inline-block relative">
             <div className="absolute inset-x-0 bottom-1 h-4 bg-bauhaus-red -z-10"></div>
             <h2 className="text-4xl font-black uppercase tracking-widest z-10">Quick Start</h2>
-            <p className="font-bold tracking-widest uppercase mt-4 text-[#0a0a14]/60">Up and running in 3 steps</p>
+            <p className="font-bold tracking-widest uppercase mt-4 text-[#0a0a14]/60">Get running in under 60 seconds</p>
+          </div>
+
+          {/* DOCKER HUB INSTANT RUN CALLOUT */}
+          <div className="mb-12 bg-white bauhaus-border shadow-[8px_8px_0_#0a0a14] p-6 md:p-8 border-l-[8px] border-bauhaus-blue">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-bauhaus-blue text-white flex items-center justify-center font-black">
+                  <Zap size={20} />
+                </div>
+                <div>
+                  <span className="text-xs font-black uppercase tracking-widest bg-bauhaus-yellow px-2 py-0.5 border border-[#0a0a14] text-[#0a0a14] mr-2">
+                    RECOMMENDED
+                  </span>
+                  <h3 className="text-xl md:text-2xl font-black uppercase tracking-widest inline">
+                    Option A · Instant Run with Docker Hub
+                  </h3>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <a
+                  href="https://hub.docker.com/r/paramjeetn/ragbench-backend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-black bg-[#0a0a14] text-white px-3 py-1.5 uppercase tracking-widest hover:bg-bauhaus-yellow hover:text-[#0a0a14] transition-colors inline-flex items-center gap-1.5"
+                >
+                  Backend Image <ExternalLink size={12} />
+                </a>
+                <a
+                  href="https://hub.docker.com/r/paramjeetn/ragbench-frontend"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-black bg-[#0a0a14] text-white px-3 py-1.5 uppercase tracking-widest hover:bg-bauhaus-yellow hover:text-[#0a0a14] transition-colors inline-flex items-center gap-1.5"
+                >
+                  Frontend Image <ExternalLink size={12} />
+                </a>
+              </div>
+            </div>
+            <p className="font-medium text-base mb-4 text-[#0a0a14]/80">
+              No cloning, Python, or Node needed. Download the pre-configured compose manifest and launch prebuilt containers immediately:
+            </p>
+            <CodeBlock code={`curl -O https://raw.githubusercontent.com/paramjeetn/RagBench/main/docker-compose.hub.yml\ndocker compose -f docker-compose.hub.yml up -d`} />
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold bg-[#16a34a]/10 p-4 border-[3px] border-[#16a34a] mt-4">
+              <span className="flex items-center gap-2 text-[#166534]"><Check size={16} strokeWidth={3} /> Backend on :8000</span>
+              <span className="flex items-center gap-2 text-[#166534]"><Check size={16} strokeWidth={3} /> Frontend on :3000</span>
+              <span className="flex items-center gap-2 text-[#166534]"><Check size={16} strokeWidth={3} /> Postgres on :5432</span>
+              <span className="flex items-center gap-2 text-[#166534]"><Check size={16} strokeWidth={3} /> Qdrant on :6333</span>
+            </div>
+          </div>
+
+          <div className="mb-6 inline-block">
+            <h3 className="text-xl font-black uppercase tracking-widest text-[#0a0a14]/80">
+              Option B · Clone & Build from Source
+            </h3>
           </div>
 
           <div className="flex flex-col gap-12">
